@@ -8,21 +8,17 @@
 </head>
 <body>
     <div class="caixa-principal">
-        <div class="barra-progresso-container">
-            <div class="barra-progresso" id="barra-progresso"></div>
-        </div>
-        <p class="contador-passos" id="contador-passos">Pergunta 1 de 5</p>
-        
         <h1>Você decide o futuro da IA</h1>
-        
         <div class="caixa-perguntas"></div>
         <div class="caixa-alternativas"></div>
-        
-        <div class="caixa-resultado escondido">
+        <div class="caixa-resultado">
             <p class="texto-resultado"></p>
-            <button class="btn-reiniciar" onclick="location.reload()">Jogar Novamente</button>
+            <button class="novamente-btn">Jogar Novament</button>
         </div>
     </div>
-    <script src="script.js"></script>
+
+    <script type="module" src="js/aleatorio.js"></script>
+    <script type="module" src="js/perguntas.js"></script>
+    <script type="module" src="js/script.js"></script>
 </body>
 </html>
