@@ -1,15 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
 
 :root {
-    --cor-fundo: #01080E;
-    --cor-principal: #0B0D20;
-    --cor-secundaria: #212333;
-    --cor-destaque: #2BDEFD;
-    --cor-texto: #D7F9FF;
+    --cor-fundo: #05050d;
+    --cor-principal: #0d0f1d;
+    --cor-secundaria: #181b30;
+    --cor-destaque: #00f0ff;
+    --cor-destaque-hover: #ff007f;
+    --cor-texto: #e2f7fe;
+    --borda-glow: rgba(0, 240, 255, 0.3);
 }
 
 body {
     background-color: var(--cor-fundo);
+    background-image: radial-gradient(circle at 50% 20%, #151938 0%, var(--cor-fundo) 70%);
     color: var(--cor-texto);
     font-family: 'Inter', sans-serif;
     display: flex;
@@ -24,8 +27,10 @@ body {
     width: 90%;
     max-width: 600px;
     text-align: center;
-    padding: 20px;
-    border-radius: 10px;
+    padding: 30px;
+    border-radius: 16px;
+    border: 1px solid var(--borda-glow);
+    box-shadow: 0 0 25px rgba(0, 240, 255, 0.15);
 }
 
 h1, .caixa-perguntas, .caixa-resultado {
@@ -34,26 +39,39 @@ h1, .caixa-perguntas, .caixa-resultado {
 
 h1 {
     color: var(--cor-destaque);
+    text-shadow: 0 0 10px rgba(0, 240, 255, 0.5);
+    font-size: 2rem;
+    margin-top: 0;
 }
 
 button {
     background-color: var(--cor-secundaria);
     color: var(--cor-texto);
-    border: none;
-    border-radius: 15px;
-    padding: 15px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    padding: 16px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 button:hover {
-    background-color: var(--cor-destaque);
-    color: var(--cor-principal);
+    background-color: var(--cor-destaque-hover);
+    color: #ffffff;
+    border-color: var(--cor-destaque-hover);
+    box-shadow: 0 0 15px rgba(255, 0, 127, 0.6);
+    transform: translateY(-2px);
 }
 
 .caixa-resultado {
     display: none;
-    margin-top: 15px;
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: rgba(0, 240, 255, 0.05);
+    border: 1px dashed var(--cor-destaque);
 }
 
 .caixa-resultado.mostrar {
@@ -63,6 +81,6 @@ button:hover {
 .caixa-alternativas {
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    margin-top: 15px;
+    gap: 12px;
+    margin-top: 20px;
 }
