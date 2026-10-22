@@ -1,26 +1,25 @@
-&lt;!DOCTYPE html&gt;
-&lt;html lang=&quot;pt-br&quot;&gt;
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Você decide o futuro da IA</title>
+</head>
+<body>
+    <div class="caixa-principal">
+        <h1>Você decide o futuro da IA</h1>
+        <div class="caixa-perguntas"></div>
+        <div class="caixa-alternativas"></div>
+        <div class="caixa-resultado">
+            <p class="texto-resultado"></p>
+            <button class="novamente-btn">Jogar Novamente</button>
+        </div>
+    </div>
 
-&lt;head&gt;
-&lt;meta charset=&quot;UTF-8&quot;&gt;
-&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
-&lt;link rel=&quot;stylesheet&quot; href=&quot;style.css&quot;&gt;
-&lt;title&gt;Você decide o futuro da IA&lt;/title&gt;
-&lt;/head&gt;
-
-&lt;body&gt;
-&lt;div class=&quot;caixa-principal&quot;&gt;
-&lt;h1&gt;Você decide o futuro da IA&lt;/h1&gt;
-&lt;div class=&quot;caixa-perguntas&quot;&gt;&lt;/div&gt;
-&lt;div class=&quot;caixa-alternativas&quot;&gt;&lt;/div&gt;
-&lt;div class=&quot;caixa-resultado&quot;&gt;
-&lt;p class=&quot;texto-resultado&quot;&gt;&lt;/p&gt;
-&lt;button class=&quot;novamente-btn&quot;&gt;Jogar novamente&lt;/button&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;script type=&quot;module&quot; src=&quot;js/aleatorio.js&quot;&gt;&lt;/script&gt;
-&lt;script type=&quot;module&quot; src=&quot;js/perguntas.js&quot;&gt;&lt;/script&gt;
-&lt;script type=&quot;module&quot; src=&quot;js/script.js&quot;&gt;&lt;/script&gt;
-&lt;/body&gt;
-
-&lt;/html&gt;
+    <!-- Ordem de carregamento: dependências primeiro, depois o script principal -->
+    <script type="module" src="js/aleatorio.js"></script>
+    <script type="module" src="js/perguntas.js"></script>
+    <script type="module" src="js/script.js"></script>
+</body>
+</html>
